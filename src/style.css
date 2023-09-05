@@ -1,0 +1,86 @@
+:root {
+    font-family: Inter, sans-serif;
+    --shape-size: 48px;
+    --player-size: 32px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    color: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+.container-game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.container-game .grid {
+    position: relative;
+    display: grid;
+    /* grid-template-columns: repeat(9, var(--shape-size)); */
+}
+.container-game .cell {
+    position: relative;
+    width: var(--shape-size);
+    height: var(--shape-size);
+}
+.container-game .cell .shape {
+    width: 100%;
+    height: 100%;
+    /* border:  1px solid rgb(177, 177, 177); */
+}
+.container-game .float-item-cell {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.container-game .player {
+    /* width: var(--player-size);
+    height: var(--player-size); */
+    z-index: 99;
+    /* border: 1px solid black; */
+    object-fit: contain;
+}
+
+.container-game .transition {
+    transition: all 0.3s ease;
+}
+
+.container-game .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    /* background-color: #000; */
+    z-index: 90;
+}
+.container-game .dot img {
+    width: 100%;
+    height: 100%;
+}
+.container-game .game-over {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
